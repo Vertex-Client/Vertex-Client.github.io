@@ -230,6 +230,7 @@ a:focus {
 #service {
 	margin-top: 100px;
 	margin-bottom: 80px;
+	background-color: white;
 }
 
 #service i {
