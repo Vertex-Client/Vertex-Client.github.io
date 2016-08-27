@@ -12,7 +12,6 @@ html {
 }
 body {
   margin: 0;
-  background-image: url("http://i.imgur.com/2cp7ZSa.png");
 }
 article,
 aside,
@@ -279,6 +278,7 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
+  background-image: url("http://i.imgur.com/2cp7ZSa.png");
 }
 input,
 button,
