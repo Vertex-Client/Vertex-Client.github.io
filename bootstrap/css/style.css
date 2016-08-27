@@ -244,7 +244,8 @@ a:focus {
 	padding-top: 60px;
 	margin-bottom: 60px;
 	display: block;
-	text-align: center
+	text-align: center;
+	background-color: white;
 }
 
 #portfoliowrap h3 {
