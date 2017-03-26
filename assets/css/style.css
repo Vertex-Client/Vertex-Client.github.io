@@ -230,7 +230,6 @@ a:focus {
 #service {
 	margin-top: 100px;
 	margin-bottom: 80px;
-	background-color: white;
 }
 
 #service i {
@@ -244,8 +243,7 @@ a:focus {
 	padding-top: 60px;
 	margin-bottom: 60px;
 	display: block;
-	text-align: center;
-	background-color: white;
+	text-align: center
 }
 
 #portfoliowrap h3 {
