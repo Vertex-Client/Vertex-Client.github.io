@@ -87,7 +87,11 @@
         <hr>
         <h1 style="text-align: center;">Mods</h1>
         <div class="container">
-            <ul class="list-group">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." id="feature">
+                <span class="input-group-btn"><button class="btn btn-default" type="button" id="search">Search</button></span>
+            </div>
+            <ul class="list-group" id="features">
                 <li class="list-group-item">Aimbot</li>
                 <li class="list-group-item">AntiAFK</li>
                 <li class="list-group-item">AntiKnockback</li>
@@ -242,6 +246,21 @@
     <script src="assets/js/jquery.prettyPhoto.js"></script>
     <script src="assets/js/jquery.isotope.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var featureList = ["Aimbot", "AntiAFK", "AntiKnockback", "ArrowGun", "AttackShock", "AttackTeleport", "AutoLeave", "AutoMine", "AutoPlace", "AutoSpammer", "AutoSwitch", "AutoSword", "AutoWalk", "Bypass", "ChatLog", "ChestESP", "ChestTracers", "CoordsDisplay", "Criticals", "Derp", "DropLocator", "EnderProjectiles", "FancyChat", "FastBreak", "FastBridge", "FastWalk", "FireAura", "Flight", "Follow", "FreezeAura", "FrostWalk", "Fullbright", "Glide", "GlitchCam", "God Mode", "HealthDisplay", "HealthTags", "HighJump", "Hitboxes", "InstaKill", "ItemGiver", "Killaura", "LetItSnow", "LiquidWalk", "NoDownGlide", "NoFall", "NoHurt", "Nuker", "OnlyDay", "Order a Pizza", "Panic", "Phase", "PlayerLocator", "PointTeleport", "PowerExplosions", "Prevent", "RandomTP", "Regen", "RemoteView", "Ride", "Rotation+", "SafeWalk", "ServerInfo", "SignEditor", "SpeedHack", "StackDrop", "Step", "StrafeAura", "Switch Gamemode", "SwitchAimbot", "TP-Aura", "TapAimbot", "TapExplosion", "TapJumpRun", "TapNuker", "TapRemover", "TapTeleport", "Target", "Teleport", "Timer", "Twerk", "Zoom"];
+            $("#search").click(function() {
+                var feature = $("#feature").val().toLowerCase().split(" ").join("");
+                $("#features").children().each(function() {
+                    if ($(this).text().toLowerCase().indexOf(feature) >= 0) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        })
+    </script>
 </body>
 
 </html>
