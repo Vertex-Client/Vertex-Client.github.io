@@ -30,6 +30,26 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script>
+		function search() {
+			// Declare variables
+			var input, filter, ul, li, a, i;
+			input = document.getElementById('myInput');
+			filter = input.value.toUpperCase();
+			ul = document.getElementById("myUL");
+			li = ul.getElementsByTagName('li');
+
+			// Loop through all list items, and hide those who don't match the search query
+			for (i = 0; i < li.length; i++) {
+				a = li[i];
+				if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		}
+	</script>
 </head>
 
 <body>
@@ -88,8 +108,8 @@
         <h1 style="text-align: center;">Mods</h1>
         <!--<div class="container">-->
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for..." id="feature">
-                <span class="input-group-btn"><button class="btn btn-default" type="button" id="search">Search</button></span>
+                <input type="text" class="form-control" onkeyup="myFunction()" placeholder="Search for..." id="feature">
+                <!--<span class="input-group-btn"><button class="btn btn-default" type="button" id="search">Search</button></span>-->
             </div>
             <ul class="list-group" id="features">
                 <li class="list-group-item">Aimbot</li>
